@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Coupang Price Tracker",
+  "version": "0.1",
+  "description": "Track and display current price of Coupang products",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.coupang.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  api:
+    build: .
+    container_name: coupang_price_api
+    restart: unless-stopped
+    volumes:
+      - ./app/data:/app/app/data   # SQLite 파일 볼륨
+    ports:
+      - "8000:8000" 
